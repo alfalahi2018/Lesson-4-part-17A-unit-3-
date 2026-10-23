@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit 3 · Lesson 3, part 2 · Grammar: going to and will</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2A43;--cream:#FFF8EC;--coral:#E8553D;--teal:#12A594;--sun:#F5B700;--sky:#9FD8FF}
+*{box-sizing:border-box}body{margin:0;background:var(--navy);color:var(--cream);font-family:'Fredoka',system-ui,sans-serif;padding:16px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+button{font-family:inherit;cursor:pointer}button:focus-visible{outline:4px solid var(--sun);outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.top small{color:var(--sky);letter-spacing:2px}.top h1{margin:0;font-size:clamp(24px,4vw,34px)}
+.nav{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.nav span{color:var(--sky)}
+.nav button{border:3px solid var(--sky);background:transparent;color:var(--cream);border-radius:999px;padding:6px 16px;font-size:17px;font-weight:600}
+.nav button.on{background:var(--sun);border-color:var(--sun);color:var(--navy)}
+.card{background:var(--cream);color:var(--navy);border-radius:26px;padding:clamp(16px,3vw,32px);display:flex;flex-direction:column;gap:14px;animation:pop .4s}
+.card h2{margin:0;font-size:clamp(20px,3vw,28px)}.meta{display:flex;justify-content:space-between;font-weight:600;font-size:18px;flex-wrap:wrap}
+.q{font-size:clamp(22px,3.4vw,32px);font-weight:700;line-height:1.35}.q b{color:var(--coral)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.o{display:flex;align-items:center;justify-content:center;gap:12px;border:3px solid var(--navy);background:#fff;color:var(--navy);border-radius:18px;padding:14px;font-size:clamp(18px,2.6vw,25px);font-weight:600}
+.o.ok{background:#8FE3CF;animation:pop .4s}.o.bad{background:#FFB4A2;animation:shake .4s}.o:disabled{cursor:default}
+.ic{background:#fff;border-radius:12px;flex:none}.fb{font-size:22px;font-weight:600;min-height:30px}
+.go{align-self:flex-end;background:var(--navy);color:var(--cream);border:0;border-radius:999px;padding:12px 32px;font-size:21px;font-weight:700}
+.go.alt{background:var(--coral);color:var(--navy)}.go[disabled]{opacity:.35}
+.row{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.big{display:flex;justify-content:center}
+.box{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:12px 20px;font-size:clamp(18px,2.4vw,22px);line-height:1.8}.box b{color:var(--coral)}
+.learn{background:var(--sky);border-radius:16px;padding:10px 18px;font-size:19px}
+.mt{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}@media(max-width:700px){.mt{grid-template-columns:1fr}}
+.s{display:block;width:100%;text-align:left;border:3px solid var(--navy);background:#fff;color:var(--navy);border-radius:14px;padding:10px 14px;font-size:clamp(17px,2.2vw,21px);margin-bottom:8px}
+.s.sel{background:var(--sun)}.s.done{background:#8FE3CF}.s b{color:var(--coral)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.t{border:3px solid var(--navy);background:#fff;border-radius:16px;padding:8px;color:var(--navy);font-weight:700;font-size:20px}
+.t.done{opacity:.35}.t.shake{animation:shake .4s;background:#FFB4A2}
+.cz{display:grid;grid-template-columns:40px repeat(3,1fr);gap:8px;align-items:center}.cz .o{padding:6px 10px;justify-content:flex-start;border-color:transparent;font-size:clamp(17px,2.2vw,22px)}.cz .o.sel{border-color:var(--navy)}
+.dot{width:26px;height:16px;border:3px solid var(--navy);border-radius:50%;background:#fff;flex:none}.sel .dot{background:var(--navy)}
+.credit{text-align:right;font-size:15px}
+@keyframes pop{0%{transform:scale(.96);opacity:.4}100%{transform:scale(1);opacity:1}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.tl{border:3px solid var(--navy);border-radius:18px;padding:10px 6px;color:var(--navy);font-size:22px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:6px}.tl.seen{background:var(--navy);color:var(--cream)}.say{background:var(--navy);color:var(--cream);border-radius:18px;padding:12px 20px;font-size:23px;min-height:30px}.pings{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.pg{border:0;border-radius:18px;padding:16px;font-size:22px;font-weight:700;color:var(--navy)}.ex{border:0;border-radius:20px;padding:22px 14px;font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--navy);display:flex;flex-direction:column;gap:6px;align-items:center}.ex small{font-size:17px;font-weight:400}.ex.seen{outline:5px solid var(--teal)}.dl{display:flex;flex-direction:column;gap:8px;max-height:430px;overflow:auto;padding-right:6px}.ln{display:block;text-align:left;border:0;border-radius:16px;padding:8px 14px;font-size:clamp(16px,2.1vw,20px);color:var(--navy);max-width:85%}.ln b{display:block;font-size:14px;opacity:.75}.ln.F{background:#9FD8FF;align-self:flex-start}.ln.M{background:#FFB4A2;align-self:flex-end}.ln.hl{outline:4px solid var(--sun)}.gc{border:0;border-radius:22px;padding:22px 16px;color:var(--navy);display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center;font-size:20px}.gc b{font-size:clamp(26px,4vw,38px)}.gc.seen{outline:5px solid var(--teal)}.gc i{font-size:clamp(19px,2.6vw,24px);font-style:normal;font-weight:600}.tm{font-size:34px;font-weight:700;color:#E8553D}.wc{border:3px solid var(--navy);background:#fff;color:var(--navy);border-radius:16px;padding:8px 6px;font-size:18px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:4px}.wc.ok{background:#8FE3CF}.wc.bad{background:#FFB4A2;animation:shake .4s}.tb{width:100%;border-collapse:collapse;font-size:clamp(17px,2.3vw,21px)}.tb td{border:2px solid var(--navy);padding:6px 10px;background:#fff}.sc{border:3px solid var(--navy);background:#fff;color:var(--navy);border-radius:16px;padding:8px;font-size:18px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:4px}.sc.on{background:#8FE3CF}.scr{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:10px 16px;font-size:clamp(16px,2.1vw,19px);line-height:1.6;max-height:240px;overflow:auto}.scr b{color:var(--coral)}</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-suitcase" viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="32" rx="5" fill="#E8553D"/><path d="M24 20v-6h16v6" fill="none" stroke="#0F2A43" stroke-width="3"/><rect x="18" y="20" width="4" height="32" fill="#B93A26"/><rect x="42" y="20" width="4" height="32" fill="#B93A26"/></symbol>
+<symbol id="i-passport" viewBox="0 0 64 64"><rect x="16" y="8" width="32" height="48" rx="4" fill="#12457A"/><circle cx="32" cy="27" r="9" fill="none" stroke="#F5B700" stroke-width="2.5"/><path d="M23 27h18M32 18v18" stroke="#F5B700" stroke-width="2"/><rect x="22" y="43" width="20" height="4" rx="2" fill="#F5B700"/></symbol>
+<symbol id="i-guidebook" viewBox="0 0 64 64"><rect x="12" y="10" width="40" height="44" rx="4" fill="#12A594"/><rect x="18" y="16" width="28" height="22" rx="2" fill="#FFF8EC"/><path d="M32 34c-6-7-6-12 0-12s6 5 0 12z" fill="#E8553D"/><rect x="18" y="43" width="22" height="3" fill="#FFF8EC"/></symbol>
+<symbol id="i-flip-flops" viewBox="0 0 64 64"><ellipse cx="22" cy="34" rx="9" ry="20" fill="#F5B700"/><ellipse cx="42" cy="34" rx="9" ry="20" fill="#F5B700"/><path d="M22 22v10M22 32l-6 6M22 32l6 6M42 22v10M42 32l-6 6M42 32l6 6" stroke="#E8553D" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-raincoat" viewBox="0 0 64 64"><path d="M20 14c4-6 20-6 24 0l10 12-6 4v24H16V30l-6-4z" fill="#F5B700"/><path d="M24 14c4 6 12 6 16 0" fill="none" stroke="#0F2A43" stroke-width="2.5"/><path d="M32 22v34" stroke="#0F2A43" stroke-width="2.5"/></symbol>
+<symbol id="i-toothbrush" viewBox="0 0 64 64"><path d="M10 52L38 28" stroke="#12A594" stroke-width="8" stroke-linecap="round"/><path d="M40 26l12-10" stroke="#9FD8FF" stroke-width="10" stroke-linecap="round"/><path d="M44 12l6 6M50 8l6 6" stroke="#E8553D" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i-washbag" viewBox="0 0 64 64"><path d="M22 24c0-10 20-10 20 0" fill="none" stroke="#0F2A43" stroke-width="3"/><rect x="8" y="22" width="48" height="30" rx="12" fill="#9FD8FF" stroke="#0F2A43" stroke-width="2.5"/><path d="M14 32h36" stroke="#0F2A43" stroke-width="3" stroke-dasharray="4 3"/><rect x="28" y="28" width="8" height="8" rx="2" fill="#E8553D"/></symbol>
+<symbol id="i-charger" viewBox="0 0 64 64"><rect x="24" y="4" width="4" height="10" fill="#E8553D"/><rect x="36" y="4" width="4" height="10" fill="#E8553D"/><rect x="20" y="14" width="24" height="22" rx="5" fill="#0F2A43"/><path d="M32 36v10c0 8 12 6 12 14" stroke="#0F2A43" stroke-width="4" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-soap" viewBox="0 0 64 64"><rect x="8" y="28" width="38" height="24" rx="10" fill="#F5B700"/><circle cx="50" cy="18" r="6" fill="none" stroke="#12A594" stroke-width="2.5"/><circle cx="40" cy="12" r="4" fill="none" stroke="#12A594" stroke-width="2.5"/><circle cx="55" cy="34" r="3" fill="none" stroke="#12A594" stroke-width="2.5"/></symbol>
+<symbol id="i-pillow" viewBox="0 0 64 64"><path d="M10 18c14-6 30-6 44 0 4 14 4 14 0 28-14 6-30 6-44 0-4-14-4-14 0-28z" fill="#9FD8FF" stroke="#0F2A43" stroke-width="2.5"/><path d="M18 24l4 4M46 24l-4 4M18 42l4-4M46 42l-4-4" stroke="#0F2A43" stroke-width="2.5" stroke-linecap="round"/></symbol>
+<symbol id="i-umbrella" viewBox="0 0 64 64"><path d="M6 32C8 10 56 10 58 32c-5-5-9-5-13 0-4-5-9-5-13 0-4-5-9-5-13 0-4-5-9-5-13 0z" fill="#E8553D"/><path d="M32 30v20c0 6-8 6-8 1" stroke="#0F2A43" stroke-width="3.5" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-medicine" viewBox="0 0 64 64"><rect x="18" y="22" width="28" height="34" rx="6" fill="#12A594"/><rect x="22" y="12" width="20" height="10" rx="3" fill="#0F2A43"/><rect x="22" y="32" width="20" height="14" rx="2" fill="#FFF8EC"/><path d="M32 34v10M27 39h10" stroke="#E8553D" stroke-width="3"/></symbol>
+</defs></svg>
+<div class="wrap">
+<div class="top"><div><small>UNIT 3 · TRAVEL · LESSON 3, PART 2</small><h1>Grammar Practice: going to and will</h1></div><div style="text-align:right"><b id="stars"></b><br><small style="letter-spacing:0">Lesson time: 25 minutes</small></div></div>
+<div class="nav" id="nav"></div>
+<div id="main"></div>
+<div class="credit">Created by T.Badria Alfalahi</div>
+</div>
+<script>
+const SY=['suitcase','passport','guidebook','flip-flops','raincoat','toothbrush','washbag','charger','soap','pillow','umbrella','medicine'];
+const ic=(k,s=56)=>'<svg class="ic" width="'+s+'" height="'+s+'" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-'+k+'"/></svg>';
+const N=a=>a.map(t=>({t}));
+const RW=[['Girl','I’m going to visit the mountains for the holidays. What are your plans, Rawan?'],['Rawan','I’m going to stay at the beach in France with my cousins.'],['Girl','Really? Won’t it be cold at this time of year?'],['Rawan','No, it will be warm, and there won’t be many people around.'],['Girl','Are you going to travel there by car?'],['Rawan','No, it’s too far. We’re going to fly.'],['Girl','Well, have fun. And send me a postcard!'],['Rawan','A postcard? No way! I’ll send you a selfie!'],['Girl','OK, and I’ll send you an email from the mountains!']];
+const GM=[['Girl','I love your house, Grandma. There are so many nice things. You have travelled so much.'],['Grandma','Yes, it’s good to travel and learn about other cultures. I’m going to show you something. There’s a small leather suitcase in my bedroom. I got it in Egypt from a shop that sold handbags.'],['Girl','Don’t stand up, Grandma. I’ll get it.'],['Grandma','OK. Open the suitcase.'],['Girl','What’s this? It looks like a turtle.'],['Grandma','It’s a musical instrument. I bought it from a man who was selling bowls and pots in the street in Mexico. I’ll play it for you.'],['Girl','Haha! Can I try?'],['Grandma','Yes, of course.'],['Girl','These flip-flops are pretty.'],['Grandma','Oh, your grandfather bought those in a market in Cairo. You can have them.'],['Girl','Oh, thank you, Grandma. I’ll take them on holiday. And look! There’s a guidebook. It’s all about Spain.'],['Grandma','Oh, yes. We went to Spain in the spring. I bought it from a little shop on a boat. I’m going to Spain again in the summer, but I’m going to buy a new guidebook. That one is too old.'],['Girl','Good plan!']];
+const GW=N(['going to','will']);
+const A=[
+{n:'1 · Going to or will?',min:3,type:'mc',q:[
+{pr:'You bought your tickets yesterday. Which one do you use?',o:GW,a:0},
+{pr:'You are cold. You decide now to close the window. Which one do you use?',o:GW,a:1},
+{pr:'You planned your trip last week. Which one do you use?',o:GW,a:0},
+{pr:'Your friend has a heavy bag. You offer to help right now. Which one do you use?',o:GW,a:1}]},
+{n:'2 · Rawan’s holidays',min:4,type:'mc',lines:RW,q:[
+{pr:'Where is Rawan going to go for the holidays?',o:N(['The mountains','The beach in France','A city in Spain']),a:1},
+{pr:'What will the weather be like in France?',o:N(['Warm','Cold','Rainy']),a:0},
+{pr:'How is her family going to travel?',o:N(['By car','By boat','By plane']),a:2},
+{pr:'What will Rawan send her friend?',o:N(['A postcard','A selfie','An email']),a:1}]},
+{n:'3 · Rashid and Mansoor',min:3,type:'mc',q:[
+{pr:'Rashid: “What ___ do next weekend?”',o:N(['are you going to','will you']),a:0,ex:'Rashid asks about plans.'},
+{pr:'Mansoor: “If it’s nice weather, ___ go camping.”',o:N(['I’ll','I’m going to']),a:0,ex:'After if + present, we use will.'},
+{pr:'Mansoor: “If you come, will you bring your camping stove?”<br>Rashid: “Of course! ___ take a tent.”',o:N(['I’m going to','I’ll']),a:1,ex:'He decides at the time of speaking.'},
+{pr:'Mansoor: “Can you bring a first-aid kit?”<br>Rashid: “OK, ___.”',o:N(['I’m going to','I will']),a:1,ex:'He decides at the time of speaking.'},
+{pr:'Rashid: “Where ___ go camping?”',o:N(['will we','are we going to']),a:1,ex:'Rashid asks about the plan.'},
+{pr:'Mansoor: “___ go camping in the forest.”',o:N(['We’ll','We’re going to']),a:1,ex:'It is their plan.'}]},
+{n:'4 · Complete the sentences',min:4,type:'mc',q:[
+{pr:'I’m hungry. I think I ___ a sandwich.',o:N(['will make','am going to make','won’t make']),a:0},
+{pr:'We ___ to the cinema later. We bought our tickets online.',o:N(['will go','are going to go','aren’t going to go']),a:1},
+{pr:'Omaima ___ basketball today. She has her swimming lesson at 4 o’clock.',o:N(['will play','is going to play','isn’t going to play']),a:2},
+{pr:'Don’t worry about your journey to Muscat next week. You ___ any problems.',o:N(['will have','won’t have','aren’t going to have']),a:1},
+{pr:'If you wait a minute, I ___ you with those big suitcases.',o:N(['help','am going to help','will help']),a:2},
+{pr:'My friends ___ videos today. They want to go cycling because it’s a nice day.',o:N(['aren’t going to watch','will watch','are going to watch']),a:0},
+{pr:'It’s late. I think I ___ to bed now.',o:N(['’m going to go','’ll go','won’t go']),a:1},
+{pr:'Bassam is playing football on Saturday and we ___ him. Do you want to come?',o:N(['will watch','aren’t going to watch','are going to watch']),a:2}]},
+{n:'5 · Grandma’s things',min:5,type:'mc',lines:GM,q:[
+{pr:'Where did Grandma get the suitcase?',o:N(['In a shop that sold handbags in Egypt','In a market in Cairo','On a street in Mexico']),a:0},
+{pr:'Where did Grandma get the musical instrument?',o:N(['In a market in Cairo','From a man in the street in Mexico','In a shop on a boat']),a:1},
+{pr:'Where did Grandma get the flip-flops?',o:N(['A bookshop in London','A shop on a boat','A market in Cairo']),a:2},
+{pr:'Where did Grandma get the guidebook?',o:N(['A little shop on a boat','A bookshop in London','A beach in Oman']),a:0},
+{pr:'What’s the suitcase made of?',o:N(['Plastic','Leather','Cotton']),a:1},
+{pr:'Which thing is from Mexico?',o:N(['The guidebook','The suitcase','The musical instrument']),a:2},
+{pr:'What does the musical instrument look like?',o:N(['A turtle','A bowl','A bag']),a:0},
+{pr:'Who bought the flip-flops?',o:N(['The girl','The girl’s grandfather','Grandma']),a:1},
+{pr:'When will the girl wear the flip-flops?',o:N(['At school','In winter','On holiday']),a:2},
+{pr:'What’s Grandma going to buy?',o:N(['A new suitcase','A new guidebook','A new instrument']),a:1}]},
+{n:'6 · Bus trip',min:3,type:'bus'},
+{n:'7 · Final task',min:3,type:'cloze'}];
+const CL=6;
+const C={t:'Grandma got her small leather suitcase in {0} (1). The flip-flops are from a {1} (2) in Cairo. The girl says, “I {2} take them on holiday.” (3) Grandma says, “I {3} buy a new guidebook.” (4) She also says, “I {4} play the musical instrument for you.” (5)',o:[['Egypt','Mexico','Spain'],['boat','market','street'],['won’t','’ll','isn’t going to'],['’m going to','will not','won’t'],['’m going to','won’t','’ll']],a:[0,1,1,0,2]};
+const nst=()=>({i:0,pk:null,sc:0,done:false,ans:{},chk:false,sh:false,sel:{}});
+let S={step:0,st:A.map(nst)};
+let ac;function tone(f,d,ty){try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();f.forEach((hz,i)=>{const o=ac.createOscillator(),g=ac.createGain();o.type=ty||'sine';o.frequency.value=hz;const t=ac.currentTime+i*d;g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d)})}catch(e){}}
+function say(t,p){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=.85;u.pitch=p||1;speechSynthesis.speak(u)}catch(e){}}
+function playL(L){try{speechSynthesis.cancel();L.forEach(l=>{const u=new SpeechSynthesisUtterance(l[1]);u.lang='en-GB';u.rate=.9;u.pitch=l[0]===L[0][0]?1.4:.8;speechSynthesis.speak(u)})}catch(e){}}
+const GOOD=()=>tone([523,659,784],.12,'triangle'),BAD=()=>tone([220,160],.2,'sawtooth');
+function go(k){tone([523,659],.1);try{speechSynthesis.cancel()}catch(e){}S.step=k;render()}
+function play(){playL(A[S.step].lines)}
+function scr(){S.st[S.step].sh=!S.st[S.step].sh;render()}
+function pick(i){const s=S.st[S.step],q=A[S.step].q[s.i];if(s.pk!==null)return;s.pk=i;if(i===q.a){s.sc++;GOOD()}else BAD();render()}
+function nxt(){const s=S.st[S.step],a=A[S.step];if(s.pk===null)return;if(s.i+1<a.q.length){s.i++;s.pk=null}else{s.done=true;tone([523,659,784,1047],.14,'triangle')}render()}
+function retry(){S.st[S.step]=nst();tone([440,523],.1);render()}
+function bp(w){const s=S.st[5];if(s.sel[w])delete s.sel[w];else if(Object.keys(s.sel).length<6)s.sel[w]=1;else{BAD();return}s.sc=Object.keys(s.sel).length;tone([660],.08);render()}
+const ph=w=>({'flip-flops':'my flip-flops',medicine:'some medicine',soap:'some soap',umbrella:'an umbrella'})[w]||'a '+w;
+function bsay(){const L=[];Object.keys(S.st[5].sel).forEach(w=>{L.push(['A','I’m going to take '+ph(w)+'.']);L.push(['B','Good idea! I’ll take '+ph(w)+', too.'])});playL(L)}
+function cl(g,i){const s=S.st[CL];if(s.chk)return;s.ans[g]=i;tone([660],.08);render()}
+function chk(){const s=S.st[CL];if(Object.keys(s.ans).length<5){tone([220],.15,'square');return}s.chk=true;const n=C.a.filter((a,g)=>s.ans[g]===a).length;tone(n>=4?[523,659,784,1047]:[392,330,262],.14,'triangle');render()}
+function stars(){const s=S.st;return s.slice(0,CL).reduce((x,y)=>x+y.sc,0)+(s[CL].chk?C.a.filter((a,g)=>s[CL].ans[g]===a).length:0)}
+function mc(a,s){
+ const q=a.q[s.i],n=a.q.length,lk=s.pk!==null,ok=lk&&s.pk===q.a;
+ if(s.done)return '<div class="card"><h2>'+a.n+'</h2><div class="q" style="text-align:center;font-size:56px;color:#E8553D">'+s.sc+' / '+n+'</div><div class="fb" style="text-align:center">'+(s.sc===n?'Excellent! Fantastic work!':s.sc>=n-2?'Well done!':'Good try! Play again.')+'</div><div class="row"><button class="go alt" onclick="retry()">Play again</button>'+(S.step<CL?'<button class="go" onclick="go('+(S.step+1)+')">Next part →</button>':'')+'</div></div>';
+ const pr=q.pr.replace('___',lk?'<b>'+q.o[q.a].t+'</b>':'______');
+ const au=a.lines?'<div class="row" style="justify-content:flex-start"><button class="go alt" style="padding:8px 24px;font-size:18px" onclick="play()">▶ Listen</button><button class="go" style="padding:8px 24px;font-size:18px" onclick="scr()">'+(s.sh?'Hide':'Show')+' the script</button></div>'+(s.sh?'<div class="scr">'+a.lines.map(l=>'<b>'+l[0]+':</b> '+l[1]).join('<br>')+'</div>':''):'';
+ return '<div class="card"><div class="meta"><span>'+a.n+' · '+a.min+' min</span><span>Question '+(s.i+1)+' / '+n+' · Stars: '+s.sc+'</span></div>'+au+'<div class="q">'+pr+'</div><div class="grid">'+q.o.map((o,i)=>'<button class="o'+(lk&&i===q.a?' ok':lk&&i===s.pk?' bad':'')+'" '+(lk?'disabled':'')+' onclick="pick('+i+')">'+o.t+'</button>').join('')+'</div><div class="fb">'+(lk?(ok?'Great job! ':'Not quite. ')+'The answer is: '+q.o[q.a].t+'. '+(q.ex||''):'Choose the correct answer.')+'</div><button class="go" onclick="nxt()" '+(lk?'':'disabled')+'>'+(s.i+1===n?'Finish':'Next →')+'</button></div>'}
+function view(){
+ const a=A[S.step],s=S.st[S.step];
+ if(a.type==='mc')return mc(a,s);
+ if(a.type==='bus'){const k=Object.keys(s.sel);return '<div class="card"><h2>'+a.n+' · '+a.min+' min — Imagine you’re going on a long bus trip.</h2><div class="learn">Choose <b>six</b> things to take in your small bag. Chosen: '+k.length+' / 6</div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">'+SY.map(w=>'<button class="sc'+(s.sel[w]?' on':'')+'" onclick="bp(\''+w+'\')">'+ic(w,52)+w+'</button>').join('')+'</div>'+(k.length===6?'<div class="scr">'+k.map(w=>'A: I’m going to take '+ph(w)+'.<br>B: Good idea! <b>I’ll</b> take '+ph(w)+', too.').join('<br>')+'</div><div class="row"><button class="go alt" onclick="bsay()">▶ Hear the dialogue</button><button class="go" onclick="go(6)">Final task →</button></div>':'')+'</div>'}
+ const g=i=>'<b>'+(s.ans[i]===undefined?'______':C.o[i][s.ans[i]])+'</b>',n=C.a.filter((x,i)=>s.ans[i]===x).length;
+ return '<div class="card"><div class="meta"><span>Finishing the lesson · Grammar</span><b>(5 marks)</b></div><div style="font-style:italic;font-size:18px">For each item, shade in the bubble next to the correct option.</div><div class="box">'+C.t.replace(/\{(\d)\}/g,(m,i)=>g(+i))+'</div>'+C.o.map((os,gi)=>'<div class="cz"><b>'+(gi+1)+')</b>'+os.map((w,i)=>{const sel=s.ans[gi]===i,cls=s.chk&&i===C.a[gi]?' ok':s.chk&&sel?' bad':'';return '<button class="o'+(sel?' sel':'')+cls+'" onclick="cl('+gi+','+i+')"><span class="dot"></span>'+w+'</button>'}).join('')+'</div>').join('')+'<div class="row"><b style="font-size:26px;color:#E8553D;margin-right:auto">'+(s.chk?'Score: '+n+' / 5':'')+'</b><span>'+(s.chk?(n===5?'Excellent!':'Review: '+C.a.map((x,i)=>s.ans[i]!==x?C.o[i][x]:null).filter(Boolean).join(', ')):'Answer all 5 items, then press Check.')+'</span><button class="go alt" onclick="chk()">Check</button><button class="go" onclick="retry()">Try again</button></div><div class="credit">Created by T.Badria Alfalahi</div></div>'}
+function render(){document.getElementById('nav').innerHTML='<span>Start with any part:</span>'+A.map((a,k)=>'<button class="'+(k===S.step?'on':'')+'" onclick="go('+k+')">'+a.n+'</button>').join('');document.getElementById('stars').textContent='Stars: '+stars();document.getElementById('main').innerHTML=view()}
+render();
+</script></body></html>
